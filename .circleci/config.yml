@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: amazon/aws-cli
     steps:
-      - create_backend
+      - checkout
       - run:
           name: Ensure backend infrastructure exist
           command: |
@@ -15,4 +15,4 @@ jobs:
 workflows:
   my_workflow:
     jobs:
-      - create_backend
+      - create_infrastructure
