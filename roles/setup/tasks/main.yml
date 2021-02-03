@@ -1,0 +1,6 @@
+---
+- name: create infrastructure
+  shell: |
+    aws cloudformation deploy \
+                --template-file backend.yml \
+                --stack-name udapeople-backend
